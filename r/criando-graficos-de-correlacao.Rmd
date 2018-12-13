@@ -1,0 +1,43 @@
+# adaptado de: https://stats.stackexchange.com/a/313138/130208
+
+```{r}
+library(tidyverse)
+library(gridExtra)
+```
+```{r}
+complement <- function(y, rho, x) {
+  if (missing(x)) x <- rnorm(length(y)) # Optional: supply a default if `x` is not given
+  y.perp <- residuals(lm(x ~ y))
+  rho * sd(y.perp) * y + y.perp * sd(y) * sqrt(1 - rho^2)
+}
+
+y <- rnorm(100, sd=10)
+x <- 1:100 # Optional
+(rho <- seq(from = -1, to = 1, by = 0.1))
+df <- data.frame(z=as.vector(sapply(rho, function(rho) complement(y, rho, x))),
+                 rho=ordered(rep(signif(rho, 2), each=length(y))),
+                 y=rep(y, length(rho)))
+
+```
+
+```{r}
+ggplot(df, aes(y, z, group = rho)) +
+  geom_smooth(method = "lm", color = "Black") +
+  geom_point(
+    aes(fill = rho),
+    alpha = 1 / 2,
+    shape = 21,
+    size = 2,
+    show.legend = FALSE
+  ) +
+  theme_bw() +
+  theme(
+    axis.title.x=element_blank(),
+    axis.text.x=element_blank(),
+    axis.ticks.x=element_blank(),
+    axis.title.y=element_blank(),
+    axis.text.y=element_blank(),
+    axis.ticks.y=element_blank()
+    ) +
+  facet_wrap(facets = ~ rho, scales = "free")
+```

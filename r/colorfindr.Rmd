@@ -1,0 +1,39 @@
+```{r}
+# Load packages
+pacman::p_load(colorfindr, dplyr)
+
+# Images
+img <- c(
+  "https://upload.wikimedia.org/wikipedia/commons/b/b5/Wappen_Aargau_matt.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/0/0e/Wappen_Glarus_matt.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/4/47/Wappen_Bern_matt.svg",
+  "https://upload.wikimedia.org/wikipedia/commons/d/d1/Wappen_Neuenburg_matt.svg"
+)
+
+plot("https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg")
+
+# Plot
+get_colors(
+  img = "https://upload.wikimedia.org/wikipedia/commons/a/af/Flag_of_South_Africa.svg",
+  min_share = 0.05
+) %>%
+  plot_colors(sort = "size")
+
+# Plot
+for (i in 1:length(img)) get_colors(img[i], top_n = 4) %>% plot_colors(sort = "size")
+
+# ma plot
+br <- magick::image_read(path = "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg")
+
+plot(br)
+
+pacman::p_load(colorfindr, dplyr)
+
+colorfindr::get_colors(
+  img = "https://upload.wikimedia.org/wikipedia/commons/0/05/Flag_of_Brazil.svg",
+  min_share = 0.05
+) %>%
+  plot_colors(sort = "size")
+
+
+```

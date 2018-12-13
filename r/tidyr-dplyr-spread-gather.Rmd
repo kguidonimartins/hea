@@ -1,0 +1,81 @@
+---
+title: "gather and spread by data carpentry"
+---
+
+# get data
+
+```{r}
+library(tidyverse)
+surveys <- read.csv("https://ndownloader.figshare.com/files/2292169")
+glimpse(surveys)
+```
+
+# `spread()`
+
+## How `spread()` works!
+
+![](https://datacarpentry.org/R-ecology-lesson/img/spread_data_R.png)
+
+### Make a "long-format" data frame
+
+```{r}
+surveys_gw <- surveys %>%
+  filter(!is.na(weight)) %>%
+  group_by(genus, plot_id) %>%
+  summarize(mean_weight = mean(weight))
+
+surveys_gw
+```
+
+```{r}
+surveys_spread <- surveys_gw %>%
+  spread(
+    key = genus,         # quem vai virar coluna
+    value = mean_weight  # quem vai preencher as células
+  )
+
+surveys_spread
+```
+
+## How `gather()` works!
+
+![](https://datacarpentry.org/R-ecology-lesson/img/gather_data_R.png)
+
+### Use the "wide-format" data frame
+
+```{r}
+surveys_gather <- surveys_spread %>%
+  gather(
+    key = genus,          # nome para a coluna de colunas
+    value = mean_weight,  # nome para a coluna de células
+    -plot_id              # menos o plot_id
+  )
+
+surveys_gather
+```
+
+## Selecione as colunas que você quer transformar em "long-format"
+
+### Assim - escolhendo as colunas:
+
+```{r}
+surveys_spread %>%
+  gather(
+    key = genus,
+    value = mean_weight,
+    c(Baiomys, Reithrodontomys)
+  )
+```
+
+### Ou assim - em sequência:
+
+```{r}
+surveys_spread %>%
+  gather(
+    key = genus,
+    value = mean_weight,
+    Baiomys:Reithrodontomys
+  )
+```
+
+[Fonte](https://datacarpentry.org/R-ecology-lesson/03-dplyr.html#reshaping_with_gather_and_spread)
