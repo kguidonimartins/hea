@@ -1,4 +1,6 @@
+# Dentro de um .gitignore, cole:
 
+```shell
 # Created by https://www.gitignore.io/api/python
 # Edit at https://www.gitignore.io/?templates=python
 
@@ -134,3 +136,4 @@ pyvenv.cfg
 pip-selfcheck.json
 
 # End of https://www.gitignore.io/api/python
+```
