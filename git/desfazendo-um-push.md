@@ -15,7 +15,7 @@ git log --pretty=format:'%h' -n 2 | tail -1 | xclip -sel clip
 Agora desfaça o *push*:
 
 ```shell
-git push -f origin hash_do_penultimo_commit:nome_do_branch
+git push -f origin hash_do_PENULTIMO-AQUELE-ANTES-DE-VOCE-CAGAR-TUDO_commit:nome_do_branch
 ```
 
 Se os arquivos desse *push* ainda estiverem em *staged*, então:
