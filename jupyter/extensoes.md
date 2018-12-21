@@ -31,3 +31,5 @@ Fontes:
 Descobri aqui: https://towardsdatascience.com/jupyter-notebook-extensions-517fa69d2231
 
 Resolvi o problema de instalação aqui: https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html#conda
+
+Mais aqui: https://towardsdatascience.com/bringing-the-best-out-of-jupyter-notebooks-for-data-science-f0871519ca29
