@@ -15,3 +15,5 @@ https://sotte.github.io/dplyr-for-python.html
 https://www.business-science.io/business/2018/10/08/python-and-r.html
 
 https://www.dataquest.io/blog/python-vs-r/
+
+https://jarvmiller.github.io/2018/02/28/r-pandas/
