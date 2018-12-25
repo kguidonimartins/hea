@@ -519,3 +519,6 @@ iris %>%
     ##  9          4.4          1.4           2.9
     ## 10          4.9          1.5           3.2
     ## # ... with 140 more rows
+
+
+[Fonte](https://twitter.com/i/moments/1044926554239881217)
