@@ -2,7 +2,7 @@
 
 Primeiro, instale o plugin [NERDcommenter](https://www.vim.org/scripts/script.php?script_id=1218).
 
-Após instalado, abra um arquivo e testar a combinação de teclas padrão (no modo normal):
+Após instalado, abra um arquivo e teste a combinação de teclas padrão (no modo normal):
 
 - Para comentar uma linha apenas, digite: `\cc`
 
