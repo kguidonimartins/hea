@@ -24,6 +24,8 @@ jupyter nbextension enable varInspector/main
 jupyter nbextension enable code_prettify/autopep8
 jupyter nbextension enable hide_input/main
 jupyter nbextension enable splitcell/splitcell
+hinterland/hinterland
+snippets/main
 ```
 
 Fontes:
@@ -32,4 +34,8 @@ Descobri aqui: https://towardsdatascience.com/jupyter-notebook-extensions-517fa6
 
 Resolvi o problema de instalação aqui: https://jupyter-contrib-nbextensions.readthedocs.io/en/latest/install.html#conda
 
-Mais aqui: https://towardsdatascience.com/bringing-the-best-out-of-jupyter-notebooks-for-data-science-f0871519ca29
+Mais aqui:
+
+- https://towardsdatascience.com/bringing-the-best-out-of-jupyter-notebooks-for-data-science-f0871519ca29
+
+- https://towardsdatascience.com/power-ups-for-jupyter-notebooks-ebfa6e5e57a
