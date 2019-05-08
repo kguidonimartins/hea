@@ -1,0 +1,1 @@
+ver pandas_profiling
