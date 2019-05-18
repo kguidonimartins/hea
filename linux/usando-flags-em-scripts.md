@@ -9,8 +9,8 @@ while [ ! $# -eq 0 ]
 do
 	case "$1" in
 		--hello | -h)
-      echo "Hello, World!"
-      exit
+			echo "Hello, World!"
+      			exit
 			;;
 		--bye | -b)
 			echo "Bye!"
