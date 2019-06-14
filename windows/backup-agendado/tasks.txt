@@ -1,0 +1,5 @@
+:: a cada 3 horas
+schtasks /Create /SC HOURLY /MO 3 /TN "gdrive-to-hd-auxiliar" /TR "D:\Google Drive\backup-settings\gdrive-to-hd-auxiliar.bat"
+
+:: uma vez por dia às 23 horas 
+schtasks /Create /SC DAILY /TN "GDriveToSeagate" /TR "D:\Google Drive\backup-settings\GDriveToSeagate.bat" /ST 23:30

@@ -1,0 +1,29 @@
+----------------------START----------------------
+Sex Dez  9 04:29:25 BRST 2016 # # # Moving files
+'source-dir' -> 'target-dir/source-dir'
+'source-dir/test.csv' -> 'target-dir/source-dir/test.csv'
+'source-dir/test.ods' -> 'target-dir/source-dir/test.ods'
+'source-dir/test.pdf' -> 'target-dir/source-dir/test.pdf'
+'source-dir/test.png' -> 'target-dir/source-dir/test.png'
+'source-dir/target-dir' -> 'target-dir/source-dir/target-dir'
+'source-dir/test.txt' -> 'target-dir/source-dir/test.txt'
+'source-dir/sub' -> 'target-dir/source-dir/sub'
+'source-dir/sub/test.docx' -> 'target-dir/source-dir/sub/test.docx'
+Sex Dez  9 04:29:25 BRST 2016 # # # Complete!
+-----------------------END-----------------------
+----------------------START----------------------
+Sex Jun 14 20:20:13 -03 2019 # # # Moving files
+'source-dir/sub' -> 'target-dir/sub'
+'source-dir/sub/test.docx' -> 'target-dir/sub/test.docx'
+'source-dir/target-dir' -> 'target-dir/target-dir'
+'source-dir/test.csv' -> 'target-dir/test.csv'
+'source-dir/test.ods' -> 'target-dir/test.ods'
+'source-dir/test.pdf' -> 'target-dir/test.pdf'
+'source-dir/test.png' -> 'target-dir/test.png'
+'source-dir/test.txt' -> 'target-dir/test.txt'
+Sex Jun 14 20:20:13 -03 2019 # # # Complete!
+-----------------------END-----------------------
+----------------------START----------------------
+Sex Jun 14 20:20:54 -03 2019 # # # Moving files
+Sex Jun 14 20:20:54 -03 2019 # # # Complete!
+-----------------------END-----------------------

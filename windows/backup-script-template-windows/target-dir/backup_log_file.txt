@@ -1,0 +1,9 @@
+2016-09-11 11:03:02.85 # # # Moving files 
+D:\Desktop\backup-script-template\source-dir\test.csv
+D:\Desktop\backup-script-template\source-dir\test.docx
+D:\Desktop\backup-script-template\source-dir\test.ods
+D:\Desktop\backup-script-template\source-dir\test.pdf
+D:\Desktop\backup-script-template\source-dir\test.png
+D:\Desktop\backup-script-template\source-dir\test.txt
+6 File(s) copied
+2016-09-11 11:03:02.87 # # # Complete! 

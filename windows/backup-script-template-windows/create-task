@@ -1,0 +1,14 @@
+# See http://www.howtogeek.com/51236/how-to-create-modify-and-delete-scheduled-tasks-from-the-command-line/
+# See https://msdn.microsoft.com/en-us/library/windows/desktop/bb736357(v=vs.85).aspx
+
+# The following command will create a task to run "algum-script.bat" at two hours intervals.
+schtasks /Create /SC HOURLY /MO 2 /TN "automatic-backup" /TR "backup-script.bat" /ST 10:00
+
+# Brief description of the commands:
+# schtasks                - command to access the "Task Scheduler" on Windows
+# /Create                 - command to create a task
+# /SC HOURLY              - programming to run a task hourly
+# /MO 2                   - modify the command above adding "2 hours" intervals
+# /TN "automatic-backup"  - naming the task
+# /TR "backup-script.bat" - script to do something (specify the path)
+# /ST 10:00               - the start time to run the task
