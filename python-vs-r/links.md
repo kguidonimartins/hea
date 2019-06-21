@@ -17,3 +17,7 @@ https://www.business-science.io/business/2018/10/08/python-and-r.html
 https://www.dataquest.io/blog/python-vs-r/
 
 https://jarvmiller.github.io/2018/02/28/r-pandas/
+
+https://news.ycombinator.com/item?id=20181270
+
+https://github.com/matloff/R-vs.-Python-for-Data-Science
