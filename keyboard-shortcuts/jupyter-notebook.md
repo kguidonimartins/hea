@@ -101,6 +101,8 @@
 
 - `Ctrl` + `Z`           : desfaz alterações do texto da célula
 
+- `Ctrl` + `/`           : Comenta código
+
 - `Ctrl` + `Shift` + `Z` : redo
 
 - `Ctrl` + `Home`        : vai para o início da célula
@@ -114,11 +116,7 @@
 - `Ctrl` + `←`           : anda para próxima palavra à esquerda
 
 - `Ctrl` + `→`           : anda para próxima palavra à direita
-
-- `Ctrl` + `Backspace`   : deleta a palavra anterior
-
-- `Ctrl` + `Del`         : deleta a palavra posterior
-
+- `Ctrl` + `Backspace`   : deleta a palavra anterior - `Ctrl` + `Del`         : deleta a palavra posterior 
 ## Comandos independentes dos modos de navegação e de edição
 
 - `Ctrl` + `Enter`       : executa texto da célula
