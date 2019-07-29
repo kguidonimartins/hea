@@ -51,9 +51,11 @@ NORMAL MODE
 VISUAL MODE
 -----------
 
-`vwU`            : change the selected word to uppercase
-`vwu`            : change the selected word to lowercase
-`gU<motion>`     : change based on motion; gU$ = uppercase from here to the final of line
+`vwU`              : change the selected word to uppercase
+`vwu`              : change the selected word to lowercase
+`gU<motion>`       : change based on motion; gU$ = uppercase from here to the final of line
+`ctrl-v`           : visual block; select columns 
+`ctrl-v`+`shift-i` : edit with multiple cursor 
 
 SPELL CHECKER
 -------------
