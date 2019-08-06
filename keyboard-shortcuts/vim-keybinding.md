@@ -56,6 +56,7 @@ VISUAL MODE
 `gU<motion>`       : change based on motion; gU$ = uppercase from here to the final of line
 `ctrl-v`           : visual block; select columns 
 `ctrl-v`+`shift-i` : edit with multiple cursor 
+`gg + shift-v`+`shift-g + :sort u` : select multiple lines, sort and remove duplicated lines 
 
 SPELL CHECKER
 -------------
