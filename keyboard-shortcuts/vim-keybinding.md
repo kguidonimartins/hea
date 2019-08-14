@@ -15,6 +15,8 @@ NAVIGATION
 `ctrl-b`         : jump backwards one full screen
 `ctrl-d`         : jump forward (down) a half screen
 `ctrl-u`         : jump back (up) one half screen
+`ctrl-e`         : line-wise scrolling
+`ctrl-y`         : line-wise scrolling
 
 NORMAL MODE
 -----------
