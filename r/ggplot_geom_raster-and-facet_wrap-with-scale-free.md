@@ -34,6 +34,8 @@ ipak(
 ```
 
 ```r
+theme_set(theme_light())
+
 df <- tibble::tribble(
   ~longitude, ~latitude, ~bird, ~mammal, ~amphibiam,    ~aet,
          -79,        -8,    98,      44,          3,  22.612,
@@ -424,10 +426,14 @@ df <- tibble::tribble(
 df %>% 
   ggplot(aes(x = longitude, y = latitude)) +
   geom_raster(aes(fill = bird)) +
-  scale_fill_viridis_c()
+  scale_fill_viridis_c() +
+  coord_equal()
 ```
 
 ![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-1-1.png)<!-- -->
+
+A amplitude da variável `bird` determina os valores da legenda para todos os gráficos
+
 
 ```r
 df %>% 
@@ -438,16 +444,21 @@ df %>%
   ggplot(aes(x = longitude, y = latitude)) +
   geom_raster(aes(fill = value)) +
   scale_fill_viridis_c() +
-  facet_wrap(~variable)
+  facet_wrap(~variable) +
+  coord_equal()
 ```
 
-![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-1-2.png)<!-- -->
+![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-2-1.png)<!-- -->
+
+Isso resolve o problema anterior
+
 
 ```r
 plot_func <- function(df, name) {
   ggplot(data = df, aes(x = longitude, y = latitude, fill = value)) +
     geom_tile() +
-    scale_fill_viridis_c(name = name)
+    scale_fill_viridis_c(name = name) +
+    coord_equal()
 }
 
 nested_tmp <- df %>% 
@@ -476,34 +487,34 @@ nested_tmp$plots
 ## [[1]]
 ```
 
-![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-1-3.png)<!-- -->
+![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-3-1.png)<!-- -->
 
 ```
 ## 
 ## [[2]]
 ```
 
-![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-1-4.png)<!-- -->
+![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-3-2.png)<!-- -->
 
 ```
 ## 
 ## [[3]]
 ```
 
-![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-1-5.png)<!-- -->
+![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-3-3.png)<!-- -->
 
 ```
 ## 
 ## [[4]]
 ```
 
-![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-1-6.png)<!-- -->
+![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-3-4.png)<!-- -->
 
 ```r
 grid.arrange(grobs = nested_tmp$plots)
 ```
 
-![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-1-7.png)<!-- -->
+![](ggplot_geom_raster-and-facet_wrap-with-scale-free_files/figure-html/unnamed-chunk-3-5.png)<!-- -->
 
 
 ---
