@@ -13,7 +13,7 @@ if (!require("rminiconda"))
 packageVersion("reticulate")
 
 # definir env_name
-env_name <- "testando_rminiconda"
+env_name <- "env_rminiconda"
 
 # definir lista de bibliotecas
 pkgs_py <- c(
@@ -43,16 +43,16 @@ install_setup_rminiconda(env_name)
 
 rminiconda::test_miniconda(env_name)
 
-pip_install_pkg <- function(pkgs_py, update = FALSE) {
+pip_install_pkg <- function(pkgs_py, upgrade = FALSE) {
   
-  if (update == TRUE) {
-    pip_update_arg <- "-U"
+  if (upgrade == TRUE) {
+    pip_upgrade_arg <- "--upgrade"
   } else {
-    pip_update_arg <- ""
+    pip_upgrade_arg <- ""
   }
   
   pkgs_py %>% 
-  purrr::map(
+  map(
     ~rminiconda_pip_install(
       pkg_name = .x,
       name = env_name, 
