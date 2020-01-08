@@ -49,6 +49,7 @@ NORMAL MODE
 `ci"`            : change inside quotes (this leaves the quotes intact)
 `ca"`            : change (a)round quotes … means quotes get replaced too
 `cat`            : change (a)round (t)ag … yep, vim understands html tags! 
+`cw<ESC>'p`      : enclose in quotes
 
 VISUAL MODE
 -----------
