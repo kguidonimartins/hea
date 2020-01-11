@@ -50,6 +50,8 @@ NORMAL MODE
 `ca"`            : change (a)round quotes … means quotes get replaced too
 `cat`            : change (a)round (t)ag … yep, vim understands html tags! 
 `cw<ESC>'p`      : enclose in quotes
+`yiw`            : yank inner word (copy word under cursor)
+`viwp`           : used after the previous command to replace a word
 
 VISUAL MODE
 -----------
