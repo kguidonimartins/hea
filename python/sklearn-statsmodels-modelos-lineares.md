@@ -29,16 +29,16 @@ print(f"Model intercept: {results_lm_sklearn.intercept_}")
 print(f"Model slope: {results_lm_sklearn.coef_}")
 
 # Using statsmodels
-df=pd.DataFrame(
+df = pd.DataFrame(
     data={
         'y': y.flat,
         'X': X.flat
     }
 )
 
-results_sm_lm = smf.ols('y ~ X', data=df).fit()
+results_lm_sm = smf.ols('y ~ X', data=df).fit()
 
-print(results_sm_lm.summary())
+print(results_lm_sm.summary())
 ```
 
 
