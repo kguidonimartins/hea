@@ -41,4 +41,4 @@ results_lm_sm = smf.ols('y ~ X', data=df).fit()
 print(results_lm_sm.summary())
 ```
 
-
+<!-- TODO: Adicionar: https://towardsdatascience.com/how-do-you-check-the-quality-of-your-regression-model-in-python-fa61759ff685 -->
